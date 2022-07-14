@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class Filter : MonoBehaviour
+namespace Runner.Utils.Actions
 {
-    [SerializeField] private bool _permissionState = true;
-
-    public bool IsPermitted()
+    public class Filter : MonoBehaviour
     {
-        return _permissionState;
-    }
+        [SerializeField] private bool _permissionState = true;
 
-    public void SetState(bool state)
-    {
-        _permissionState = state;
+        public bool IsPermitted()
+        {
+            return _permissionState;
+        }
+
+        public void SetState(bool state)
+        {
+            _permissionState = state;
+        }
     }
 }

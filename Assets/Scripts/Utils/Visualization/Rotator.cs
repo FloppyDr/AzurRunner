@@ -1,8 +1,8 @@
-using System;
-using DG.Tweening;
-using Runner.Data;
 using UnityEngine;
-using UnityEngine.Events;
+
+using DG.Tweening;
+
+using Runner.Data;
 
 namespace Runner.Utils.Visualization
 {

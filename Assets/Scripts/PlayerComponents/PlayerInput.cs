@@ -49,10 +49,5 @@ namespace Runner.PlayerComponents
             _mouseButtonReleased?.Invoke();
             _canReadInput = false;
         }
-
-        public void ChangeInputState(bool state)
-        {
-            _canReadInput = state;
-        }
     }
 }

@@ -30,7 +30,7 @@ namespace Runner
             for (int i = 0; i < _roadData.RoadPrefabs.Length; i++)
             {
                 _spawnPosition = new Vector3(_spawnPosition.x,_spawnPosition.y,_initPosition.position.z + i * _roadData.RoadPrefabs[i].transform.localScale.z);
-                Debug.Log(_spawnPosition);
+                
                 var spawned = Instantiate(_roadData.RoadPrefabs[i], _spawnPosition, Quaternion.identity,_parent);
                 _road.Add(spawned);
             }

@@ -5,9 +5,10 @@ namespace Runner.PlayerComponents
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] private PlayerInput _input;
         [SerializeField] private UnityEvent<int> _coinsCountChanged;
-   
+        
+        [SerializeField] private PlayerInput _input;
+        
         private int _coinsCount;
         private bool _isAbleToMove;
 
