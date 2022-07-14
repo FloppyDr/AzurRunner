@@ -18,10 +18,5 @@ namespace Runner.PickUp
                 _collected?.Invoke();
             }
         }
-//move to script
-        private void Start()
-        {
-            transform.DORotate(new Vector3(0f, 180f, 0f), 2f).SetEase(Ease.Linear).SetLoops(-1);
-        }
     }
 }

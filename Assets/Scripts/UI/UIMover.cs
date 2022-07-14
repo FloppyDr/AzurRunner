@@ -11,7 +11,7 @@ namespace Runner.UI
         [SerializeField] private Vector2 _showPosition;
         [SerializeField] private float _moveDuration = 0.5f;
     
-        private Sequence _moveSequence = null;
+        private Sequence _moveSequence;
     
         public void Show()
         {
@@ -22,13 +22,23 @@ namespace Runner.UI
         {
             Move(_hidePosition, _moveDuration);
         }
-    
-        private void Move(Vector2 toPosition, float moveDuration)
+
+        public void EndMove()
         {
             _moveSequence?.Kill();
+        }
+
+        private void Move(Vector2 toPosition, float moveDuration)
+        {
+            EndMove();
 
             _moveSequence = DOTween.Sequence()
                 .Append(_rectTransform.DOAnchorPos(toPosition, moveDuration));
+        }
+
+        private void OnDisable()
+        {
+            EndMove();
         }
     }
 }
